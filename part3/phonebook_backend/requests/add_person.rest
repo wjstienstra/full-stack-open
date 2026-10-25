@@ -1,4 +1,14 @@
+### Add a new person to the phonebook
 POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "Lodewijk VII",
+    "number": "06111913772"
+}
+
+### Add a new person to the phonebook with render deployment
+POST https://phonebook-backend-mvhm.onrender.com/api/persons
 Content-Type: application/json
 
 {
