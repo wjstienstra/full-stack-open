@@ -23,25 +23,25 @@ const ContactsSchema = new mongoose.Schema({
 const Contact = mongoose.model('Contact', ContactsSchema)
 
 if (process.argv.length === 3) {
-    Contact.find({}).then(result => {
-        result.forEach(note => {
-        console.log(note)
-        mongoose.connection.close()
+  Contact.find({}).then(result => {
+    result.forEach(note => {
+      console.log(note)
+      mongoose.connection.close()
     })
     process.exit(1)
-    
-    })
+
+  })
 }
 
 if (process.argv.length > 3) {
-    const contact = new Contact({
-        name: process.argv[3],
-        number: process.argv[4],
-    })
+  const contact = new Contact({
+    name: process.argv[3],
+    number: process.argv[4],
+  })
 
-    contact.save().then(result => {
+  contact.save().then(result => {
     console.log(`Added ${contact.name} number ${contact.number} to phonebook`)
     mongoose.connection.close()
-    })
+  })
 }
 
