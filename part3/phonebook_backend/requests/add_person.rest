@@ -3,8 +3,8 @@ POST http://localhost:3001/api/persons
 Content-Type: application/json
 
 {
-    "name": "Lodewijk VII",
-    "number": "06111913772"
+    "name": "Lodewijk VIII",
+    "number": "AASDF0612"
 }
 
 ### Add a new person to the phonebook with render deployment
